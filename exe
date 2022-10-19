@@ -1,44 +1,4 @@
-# 1) Escreva  um  programa  que  receba  uma lista de 10 inteiros  via  teclado  e imprima todo a lista em na mesma linha.
-
-lista = []
-
-for i in range(10):
-    lista.append(int(input('Digite um número inteiro: ')))
-print(lista)
-
-# 2) Escreva um algoritmo para ler o nome e a idade de uma pessoa, e exibir quantos dias de vida ela  possui.  Considere  sempre  anos  completos, 
-#e que  um  ano  possui  365  dias.Ex: uma  pessoa  com 19 anos possui 6935 dias de vida; veja um exemplo de saída: MARIA, VOCÊ JÁ VIVEU 6935 DIAS 
-
-nome = str(input("Digite seu nome: "))
-anos = int(input("Digite a sua idade: "))
-a = anos * 365
-print("{}, você já viveu {} dias.".format(nome, a))
-
-
-#3) faça um programa que receba varias idades e que calcule e mostre a média das idades digitadas. 
-# Finalize digitando idade igual a zero.
-
-idades = []
-média = 1
-while média:
-    média = int(input('Digite uma idade e após 0 para mostrar a média entre elas: '))
-    if média:
-        idades.append(média)
-print('idades: {}'.format(idades))
-print()
-print('media: ',sum(idades)/len(idades))   
-
-# 4) Faça um programa que receba dez números e que calcule e mostre a quantidade de números entre 30 e 90. 
-num = 0
-qtd_num = 0 
-
-for i in range(10):
-    num = int(input('Digite um número inteiro: '))
-    if num >=30 and num <= 90:
-        qtd_num += 1
-print(qtd_num)
-
-# 5) Faça um algoritmo que receba o valor dos catetos de um triângulo, calcule e mostre o valor da hipotenusa. 
+# 1) Faça um algoritmo que receba o valor dos catetos de um triângulo, calcule e mostre o valor da hipotenusa. 
 
 from math import hypot
 catop = float(input("Digite o valor do cateto oposto: "))
@@ -46,6 +6,44 @@ catadj = float(input("Digite o valor do cateto adjacente: "))
 hip = hypot(catop , catadj)
 print("O valor da hipotenusa é {:.2f}".format(hip))
 
+# 2) Alguns países medem temperaturas em graus Celsius, e outros em graus Fahrenheit. 
+# Faça um algoritmo para ler uma temperatura Celsius e imprimi-Ia em Fahrenheit (pesquise como fazer este tipo de conversão). 
 
+c = float(input("Digite a temperatura em Celsius: "))
+f = (c  * 1.8 ) + 32
+print( "A temperatura em Fahrenheit é {}".format(f))
 
+# 3) Faça um algoritmo que receba três números, calcule e mostre a multiplicação desses números.
+
+a = int(input("Digite um número: "))
+s = int(input("Digite um número: "))
+z = int(input("Digite outro número: "))
+m = a * s * z
+print("A multiplicação desses números é {}".format(m))
+
+# 4) Escreva um algoritmo para ler o nome e a idade de uma pessoa, e exibir quantos dias de vida ela  possui.  Considere  sempre  anos  completos, 
+#e que  um  ano  possui  365  dias.Ex: uma  pessoa  com 19 anos possui 6935 dias de vida; veja um exemplo de saída: MARIA, VOCÊ JÁ VIVEU 6935 DIAS 
+
+nome = str(input("Digite seu nome: "))
+anos = int(input("Digite a sua idade: "))
+a = anos * 365
+print("{}, você já viveu {} dias.".format(nome, a))
+
+# 5) Faça  um  algoritmo  para  ler  três  notas  de  um  aluno  em  uma  disciplina  e
+#  imprimir  a  sua  média  ponderada (as notas tem pesos respectivos de 1, 2 e 3). 
+
+nota1 = float(input("Digite a primeira nota do aluno: "))
+nota2 = float(input("Digite a segunta nota do aluno: "))
+nota3 = float(input("Digite a terceira nota do aluno: "))
+média =  (nota1 + nota2 + nota3) / 3
+print("A média do aluno é {}".format(média))
+
+# 6) Faça um algoritmo para ler o salário de um funcionário e aumentá-Io em 15%.
+#  Após o aumento, desconte 8% de impostos. Imprima o salário inicial, o salário com o aumento e o salário final. 
+
+sal = float(input("Qual é o sálrio do funcionário? R$ "))
+aumento = sal + (sal * 15 / 100)
+desc = (aumento * 0.08) 
+resul = aumento - desc
+print("O salário inicial é {:.2f}, o salário com aumento de 15% é {:.2f} e o salário final com desconto de 8% é {:.2f}". format(sal, aumento, resul))
 

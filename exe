@@ -6,12 +6,11 @@ catadj = float(input("Digite o valor do cateto adjacente: "))
 hip = hypot(catop , catadj)
 print("O valor da hipotenusa é {:.2f}".format(hip))
 
-# 2) Alguns países medem temperaturas em graus Celsius, e outros em graus Fahrenheit. 
-# Faça um algoritmo para ler uma temperatura Celsius e imprimi-Ia em Fahrenheit (pesquise como fazer este tipo de conversão). 
+# 2) Faça um algoritmo que calcule e mostre a tabuada de um número digitado pelo usuário. 
 
-c = float(input("Digite a temperatura em Celsius: "))
-f = (c  * 1.8 ) + 32
-print( "A temperatura em Fahrenheit é {}".format(f))
+a = int(input("Digite a tabuada que deseja saber: "))
+for i in range(1,11):
+ print("{} x {} = {}".format(a, i, a*i))
 
 # 3) Faça um algoritmo que receba três números, calcule e mostre a multiplicação desses números.
 
@@ -47,7 +46,7 @@ desc = (aumento * 0.08)
 resul = aumento - desc
 print("O salário inicial é {:.2f}, o salário com aumento de 15% é {:.2f} e o salário final com desconto de 8% é {:.2f}". format(sal, aumento, resul))
 
-#A padaria Hotpão vende uma certa quantidade de pães franceses e uma quantidade de broas a cada dia. Cada pãozinho custa R$ 0,12 e a broa custa R$ 1,50. 
+# 7) A padaria Hotpão vende uma certa quantidade de pães franceses e uma quantidade de broas a cada dia. Cada pãozinho custa R$ 0,12 e a broa custa R$ 1,50. 
 #Ao final do dia, o dono quer saber quanto arrecadou com a venda dos pães e broas (juntos),
 # e quanto deve guardar numa conta de poupança (10% do total arrecadado). Você foi contratado para fazer os cálculos para o dono.
 # Com base nestes fatos, faça um algoritmo para ler as quantidades de pães e de broas, e depois calcular os dados solicitados. 
@@ -61,3 +60,22 @@ print(total)
 
 poupança = total * 0.10
 print("Você deverá guardar R${:.2f} na poupança!".format(poupança))
+
+# 8) Alguns países medem temperaturas em graus Celsius, e outros em graus Fahrenheit. 
+# Faça um algoritmo para ler uma temperatura Celsius e imprimi-Ia em Fahrenheit (pesquise como fazer este tipo de conversão). 
+
+c = float(input("Digite a temperatura em Celsius: "))
+f = (c  * 1.8 ) + 32
+print( "A temperatura em Fahrenheit é {}".format(f))
+
+# 9) Um  funcionário  recebe  um  salário  fixo  mais  4%  de  comissão  sobre  as  vendas.
+#Faça  um  algoritmo que receba o salário fixo de um funcionário e o valor de suas vendas,
+#calcule e mostre a comissão e o salário final do funcionário. 
+
+f = float(input("Digite o seu salário R$ "))
+v = float(input("Digite o valor de suas vendas R$ "))
+comissao = (v * 0.04)
+final = f + comissao
+print("Sua comissão será de R${} e seu salário final ficará R${:.2f}.".format(comissao, final))
+
+# 10) 

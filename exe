@@ -78,4 +78,11 @@ comissao = (v * 0.04)
 final = f + comissao
 print("Sua comissão será de R${} e seu salário final ficará R${:.2f}.".format(comissao, final))
 
-# 10) 
+# 10) Faça um algoritmo que receba o valor do salário mínimo e o valor do salário de um funcionário,
+#  calcule e mostre a quantidade de salários mínimos que ganha esse funcionário. 
+
+m = float(input("Digite o valor do salário mínimo R$: "))
+s = float(input("Digite o seu salário: R$ "))
+qtd = s / m
+print("A quantidade de salários mínimos que você recebe equivale a {:,.0f} salário(s) mínimo(s).".format(qtd))
+

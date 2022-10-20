@@ -35,7 +35,11 @@ nota1 = float(input("Digite a primeira nota do aluno: "))
 nota2 = float(input("Digite a segunta nota do aluno: "))
 nota3 = float(input("Digite a terceira nota do aluno: "))
 média =  (nota1 + nota2 + nota3) / 3
-print("A média do aluno é {}".format(média))
+print("A média do aluno é {:,.2f}".format(média))
+if média > 6.0:
+    print("APROVADO!")  
+else:
+    print("REPROVADO!")
 
 # 6) Faça um algoritmo para ler o salário de um funcionário e aumentá-Io em 15%.
 #  Após o aumento, desconte 8% de impostos. Imprima o salário inicial, o salário com o aumento e o salário final. 

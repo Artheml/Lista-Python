@@ -90,4 +90,3 @@ m = float(input("Digite o valor do salário mínimo: R$ "))
 s = float(input("Digite o seu salário: R$ "))
 qtd = s / m
 print("A quantidade de salários mínimos que você recebe equivale a {:,.0f} salário(s) mínimo(s).".format(qtd))
-

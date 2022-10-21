@@ -36,7 +36,7 @@ nota2 = float(input("Digite a segunta nota do aluno: "))
 nota3 = float(input("Digite a terceira nota do aluno: "))
 média =  (nota1 + nota2 + nota3) / 3
 print("A média do aluno é {:,.2f}".format(média))
-if média > 6.0:
+if média >= 6.0:
     print("APROVADO!")  
 else:
     print("REPROVADO!")
@@ -44,7 +44,7 @@ else:
 # 6) Faça um algoritmo para ler o salário de um funcionário e aumentá-Io em 15%.
 #  Após o aumento, desconte 8% de impostos. Imprima o salário inicial, o salário com o aumento e o salário final. 
 
-sal = float(input("Qual é o sálrio do funcionário? R$ "))
+sal = float(input("Qual é o salário do funcionário? R$ "))
 aumento = sal + (sal * 15 / 100)
 desc = (aumento * 0.08) 
 resul = aumento - desc
@@ -55,13 +55,12 @@ print("O salário inicial é {:.2f}, o salário com aumento de 15% é {:.2f} e o
 # e quanto deve guardar numa conta de poupança (10% do total arrecadado). Você foi contratado para fazer os cálculos para o dono.
 # Com base nestes fatos, faça um algoritmo para ler as quantidades de pães e de broas, e depois calcular os dados solicitados. 
 
-p = float(input("Digite a quantidade vendida de pãozinhos:R$ "))
-b = float(input("Digite a quantidade vendida de broa:R$ "))
+p = float(input("Digite a quantidade vendida de pãozinhos: "))
+b = float(input("Digite a quantidade vendida de broa: "))
 pao = (0.12 * p)
 broa = (1.50 * b)
 total = pao + broa
-print(total)
-
+print("Total de {}".format(total))
 poupança = total * 0.10
 print("Você deverá guardar R${:.2f} na poupança!".format(poupança))
 
@@ -80,7 +79,7 @@ f = float(input("Digite o seu salário R$ "))
 v = float(input("Digite o valor de suas vendas R$ "))
 comissao = (v * 0.04)
 final = f + comissao
-print("Sua comissão será de R${} e seu salário final ficará R${:.2f}.".format(comissao, final))
+print("Sua comissão será de R${:.2f} e seu salário final ficará R${:.2f}.".format(comissao, final))
 
 # 10) Faça um algoritmo que receba o valor do salário mínimo e o valor do salário de um funcionário,
 #  calcule e mostre a quantidade de salários mínimos que ganha esse funcionário. 

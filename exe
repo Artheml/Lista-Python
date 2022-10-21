@@ -1,6 +1,11 @@
 LISTA DE EXERCÍCIOS SEQUENCIAIS E CONDICIONAIS 
 
-# 1) Faça um algoritmo que receba o valor dos catetos de um triângulo, calcule e mostre o valor da hipotenusa. 
+# 1) Faça um algoritmo que calcule e mostre a tabuada de um número digitado pelo usuário. 
+a = int(input("Digite a tabuada que deseja saber: "))
+for i in range(1,11):
+ print("{} x {} = {}".format(a, i, a*i))
+
+# 2) Faça um algoritmo que receba o valor dos catetos de um triângulo, calcule e mostre o valor da hipotenusa. 
 
 from math import hypot
 catop = float(input("Digite o valor do cateto oposto: "))
@@ -8,29 +13,8 @@ catadj = float(input("Digite o valor do cateto adjacente: "))
 hip = hypot(catop , catadj)
 print("O valor da hipotenusa é {:.2f}".format(hip))
 
-# 2) Faça um algoritmo que calcule e mostre a tabuada de um número digitado pelo usuário. 
 
-a = int(input("Digite a tabuada que deseja saber: "))
-for i in range(1,11):
- print("{} x {} = {}".format(a, i, a*i))
-
-# 3) Faça um algoritmo que receba três números, calcule e mostre a multiplicação desses números.
-
-a = int(input("Digite um número: "))
-s = int(input("Digite um número: "))
-z = int(input("Digite outro número: "))
-m = a * s * z
-print("A multiplicação desses números é {}".format(m))
-
-# 4) Escreva um algoritmo para ler o nome e a idade de uma pessoa, e exibir quantos dias de vida ela  possui.  Considere  sempre  anos  completos, 
-#e que  um  ano  possui  365  dias.Ex: uma  pessoa  com 19 anos possui 6935 dias de vida; veja um exemplo de saída: MARIA, VOCÊ JÁ VIVEU 6935 DIAS 
-
-nome = str(input("Digite seu nome: "))
-anos = int(input("Digite a sua idade: "))
-a = anos * 365
-print("{}, você já viveu {} dias.".format(nome, a))
-
-# 5) Faça  um  algoritmo  para  ler  três  notas  de  um  aluno  em  uma  disciplina  e
+# 3) Faça  um  algoritmo  para  ler  três  notas  de  um  aluno  em  uma  disciplina  e
 #  imprimir  a  sua  média  ponderada (as notas tem pesos respectivos de 1, 2 e 3). 
 
 nota1 = float(input("Digite a primeira nota do aluno: "))
@@ -42,6 +26,22 @@ if média >= 6.0:
     print("APROVADO!")  
 else:
     print("REPROVADO!")
+
+# 4) Escreva um algoritmo para ler o nome e a idade de uma pessoa, e exibir quantos dias de vida ela  possui.  Considere  sempre  anos  completos, 
+#e que  um  ano  possui  365  dias.Ex: uma  pessoa  com 19 anos possui 6935 dias de vida; veja um exemplo de saída: MARIA, VOCÊ JÁ VIVEU 6935 DIAS 
+
+nome = str(input("Digite seu nome: "))
+anos = int(input("Digite a sua idade: "))
+a = anos * 365
+print("{}, você já viveu {} dias.".format(nome, a))
+
+# 5)  Faça um algoritmo que receba três números, calcule e mostre a multiplicação desses números.
+
+a = int(input("Digite um número: "))
+s = int(input("Digite um número: "))
+z = int(input("Digite outro número: "))
+m = a * s * z
+print("A multiplicação desses números é {}".format(m))
 
 # 6) Faça um algoritmo para ler o salário de um funcionário e aumentá-Io em 15%.
 #  Após o aumento, desconte 8% de impostos. Imprima o salário inicial, o salário com o aumento e o salário final. 
@@ -86,7 +86,7 @@ print("Sua comissão será de R${:.2f} e seu salário final ficará R${:.2f}.".f
 # 10) Faça um algoritmo que receba o valor do salário mínimo e o valor do salário de um funcionário,
 #  calcule e mostre a quantidade de salários mínimos que ganha esse funcionário. 
 
-m = float(input("Digite o valor do salário mínimo R$: "))
+m = float(input("Digite o valor do salário mínimo: R$ "))
 s = float(input("Digite o seu salário: R$ "))
 qtd = s / m
 print("A quantidade de salários mínimos que você recebe equivale a {:,.0f} salário(s) mínimo(s).".format(qtd))
